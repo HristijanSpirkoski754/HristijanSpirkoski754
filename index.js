@@ -15,7 +15,7 @@ let bg = {
 
 
 async function fetchInfo(q) {
-    let response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${q}&days=4&aqi=no&alerts=no`)
+    let response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${q}&days=4&aqi=no&alerts=no`)
     if (!response.ok) return;
 
     let data = await response.json();
