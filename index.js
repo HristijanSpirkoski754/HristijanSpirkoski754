@@ -58,7 +58,7 @@ function displayData(data) {
     let forecastItems = document.querySelectorAll(".idno_vreme")
     let i = 0;
     for(let item of forecastItems) {
-        item.querySelector("img").src = `https:${data.forecast.forecastday[i].day.condition.icon}`
+        item.querySelector("img").src = `https:${data.forecast.forecastday[i]?.day?.condition.icon}`
         item.querySelector("h3").innerText = `${denovi[new Date(data.forecast.forecastday[i].date).getDay()].slice(0,3)}`
         item.querySelector("h4").innerText = `${parseInt(data.forecast.forecastday[i].day.avgtemp_c)}°C`
         i++;
